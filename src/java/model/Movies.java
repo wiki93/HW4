@@ -3,6 +3,7 @@ package model;
 
 public class Movies {
     
+    
     private int movieID;
     private String movieName;
     private int dateProduced;
