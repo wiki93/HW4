@@ -98,6 +98,10 @@ public class ReadQuery {
                 table += movie.getRating();
                 table += "</td>";
                 
+                table += "<td>";
+                table += "<a href=delete?movieID=" + movie.getMovieID() + "> Delete </a>";
+                table += "</td>";
+                
                 table += "</tr>";
             }
         } catch (SQLException ex) {
