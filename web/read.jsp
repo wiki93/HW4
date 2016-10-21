@@ -12,5 +12,10 @@
     <body>
         <h1>My Movies Database</h1>
         <%= table %>
+        
+        <br><br>
+        
+        <a href="add">Add A New Movie</a>
+        
     </body>
 </html>
