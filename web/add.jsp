@@ -20,10 +20,10 @@
             <input type="text" name="name" value="" />
             <br>
             <label>Date Produced:</label>
-            <input type="text" name="name" value="" />
+            <input type="text" name="produced" value="" />
             <br>
             <label>Rating:</label>
-            <input type="text" name="name" value="" />
+            <input type="text" name="rating" value="" />
             <br>
             <input type="submit" name="submit" value="Submit" />
         </form>

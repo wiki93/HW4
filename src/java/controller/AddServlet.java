@@ -5,13 +5,16 @@
  */
 package controller;
 
+import dbHelpers.AddQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Movies;
 
 /**
  *
@@ -58,7 +61,8 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+            doPost(request, response);
     }
 
     /**
@@ -72,7 +76,30 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       
+            //get the data
+            String name = request.getParameter("name");
+            int dateProduced = Integer.parseInt(request.getParameter("produced"));
+            int rating = Integer.parseInt(request.getParameter("rating"));
+            
+            //set up a movie object
+            Movies movie = new Movies();
+            
+            movie.setMovieName(name);
+            movie.setDateProduced(dateProduced);
+            movie.setRating(rating);
+            
+            //set up an addQuery object
+            AddQuery aq = new AddQuery();
+            
+            //pass the movie to addQuery to add to the database
+            aq.doAdd(movie);
+            //pass execution control to the ReadServlet
+            String url = "/read";
+            
+            RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        
     }
 
     /**
