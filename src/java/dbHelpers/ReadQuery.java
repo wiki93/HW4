@@ -85,6 +85,9 @@ public class ReadQuery {
             table += "<th>";
             table += "Rating";
             table += "</th>";
+            table += "<th>";
+            table += "";
+            table += "</th>";
             table += "</tr>";
             
             while(this.results.next())
