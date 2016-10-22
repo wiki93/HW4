@@ -39,7 +39,7 @@ th {
     border-collapse: collapse;
     padding: 15px;
     text-align: left;
-    color: #F08080;
+    color: #696969;
 }
 
 tr:hover td {background:#cccccc}
@@ -53,4 +53,8 @@ label {
 
 input, label {
     float:left;
+}
+
+a {
+    color: #696969;
 }
