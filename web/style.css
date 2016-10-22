@@ -43,3 +43,14 @@ th {
 }
 
 tr:hover td {background:#cccccc}
+
+label {
+    width:90px;
+    clear:left;
+    text-align:left;
+    padding-right:10px;
+}
+
+input, label {
+    float:left;
+}

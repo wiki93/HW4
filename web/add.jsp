@@ -17,6 +17,7 @@
         
         <form name="addForm" action="addMovie" method="get">
         
+            
             <label>Movie Name:</label>
             <input type="text" name="name" value="" />
             <br>
@@ -26,7 +27,9 @@
             <label>Rating:</label>
             <input type="text" name="rating" value="" />
             <br>
+            <br>
             <input type="submit" name="submit" value="Submit" />
+            
         </form>
     </body>
 </html>
