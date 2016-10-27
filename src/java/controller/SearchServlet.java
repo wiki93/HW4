@@ -5,8 +5,10 @@
  */
 package controller;
 
+import dbHelpers.SearchQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -58,7 +60,8 @@ public class SearchServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+            doPost(request, response);
     }
 
     /**
@@ -72,7 +75,24 @@ public class SearchServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+            //Get the text to search
+            String movieName = request.getParameter("searchVal");
+            //Create a SearchQuery helper object
+            SearchQuery sq = new SearchQuery();
+            
+            //Get the Html table from the SearchQuerry object
+            sq.doSearch(movieName);
+            String table = sq.getHTMLTable();
+            
+            //Pass execution control to read.jsp alog with the table.
+            request.setAttribute("table", table);
+            String url = "/read.jsp";
+            
+            RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+            
+            
     }
 
     /**
