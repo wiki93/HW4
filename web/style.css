@@ -58,3 +58,5 @@ input, label {
 a {
     color: #696969;
 }
+
+input[readonly] {background-color: gray;}
