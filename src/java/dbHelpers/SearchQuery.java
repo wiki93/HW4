@@ -52,7 +52,7 @@ public class SearchQuery {
     public void doSearch(String movieName){
         
         try {
-            String query = "SELECT * FROM movies WHERE UPPER(movieName) LIKE ? ORDER BY movieID ASCg";
+            String query = "SELECT * FROM movies WHERE UPPER(movieName) LIKE ? ORDER BY movieID ASC";
             
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, "%" + movieName.toUpperCase() + "%");
