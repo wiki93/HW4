@@ -21,19 +21,27 @@
 
                 <form name="addForm" action="addMovie" method="get">
 
-
-                    <label>Movie Name:</label>
-                    <input type="text" name="name" value="" />
-                    <br>
-                    <label>Date Produced:</label>
-                    <input type="text" name="produced" value="" />
-                    <br>
-                    <label>Rating:</label>
-                    <input type="text" name="rating" value="" />
-                    <br>
+                    <table>
+                        <th colspan="2">Add A New Movie:</th>
+                        <tr>
+                            <td>Movie Name:</td>
+                            <td><input type="text" name="name" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td>Date Produced:</td>
+                            <td><input type="text" name="produced" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td>Rating:</td>
+                            <td><input type="text" name="rating" value="" /></td>
+                            
+                        </tr>
+                        
+                    </table>
                     <br>
                     <input type="reset" name="reset" value="Clear" />
                     <input type="submit" name="submit" value="Submit" />
+                    
 
                 </form>
 

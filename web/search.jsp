@@ -19,13 +19,18 @@
 
             <div class="main"> <!-- main div -->
 
-                <h1>Search Movies</h1>
+                
 
                 <form name="searchForm" action="search" method="get">
-
-                    <input type="text" name="searchVal" value="" />
-
-                    <br><br>
+                    <table>
+                        <th colspan="2">Search for a Movie</th>
+                        <tr>
+                            <td>Movie Name:</td>
+                            <td><input type="text" name="searchVal" value="" /></td>
+                        </tr>
+                    </table>
+             
+                    <br>
 
                     <input type="submit" name="submit" value="Search" />
 

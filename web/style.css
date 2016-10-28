@@ -68,7 +68,7 @@ float: left;
 
 
 table{
-   border: 1px solid black;
+   border: 2px solid white;
    border-collapse: collapse;
    padding: 15px;
    background-color: #F08080;
@@ -76,7 +76,7 @@ table{
    
 }
 td {
-   border: 1px solid black;
+   border: 2px solid white;
    border-collapse: collapse;
    padding: 15px;
    background-color: #F08080;
@@ -85,7 +85,7 @@ td {
 
 th {
     background-color: #FFFF99;
-    border: 1px solid black;
+    border: 2px solid white;
     border-collapse: collapse;
     padding: 15px;
     text-align: left;
