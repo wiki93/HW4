@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : Oct 11, 2016, 3:29:22 PM
-    Author     : Dylan Green
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,10 +7,26 @@
         <link rel="stylesheet" type="text/css" href="./style.css" />
     </head>
     <body>
-        <h1>Movies and Ratings Database</h1>
         
-        <a href="read">View All Movies</a>
-        <br><br>
-        <a href="search.jsp">Search Movies</a>
+        <div class="wrap"> <!-- div to hold all other divs -->
+            
+            <%@ include file="includes/header.jsp" %>
+            
+            <%@ include file="includes/menu.jsp" %>
+            
+            
+        <div class="main"> <!-- main div -->
+            
+            <h1>Movies and Ratings Database</h1>
+        
+            <a href="read">View All Movies</a>
+            <br><br>
+            <a href="search.jsp">Search Movies</a>
+        
+        </div> <!-- close main div-->
+            
+        <%@ include file="includes/footer.jsp" %>
+        
+        </div> <!-- close wrap div-->
     </body>
 </html>
